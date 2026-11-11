@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #060708;
+    --panel: #0c0d0f;
+    --panel-2: #151619;
+    --card: #1b1b1c;
+    --line: #303237;
+    --text: #f5f6f7;
+    --muted: #9b9da3;
+    --blue: #1684ff;
+    --blue-2: #075bd9;
+    --red: #f2344f;
+    --radius: 14px;
+    --font: "Inter", sans-serif;
+    --display: "Rajdhani", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-color: #34373d #090a0b;
+    scrollbar-width: thin;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #090a0b;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #34373d;
+    border-radius: 10px;
+  }
+
+  ::selection {
+    color: #fff;
+    background: #0969d9;
+  }
+}
+
+.font-display {
+  font-family: "Rajdhani", sans-serif;
+}
+
+.font-script {
+  font-family: "Allura", cursive;
+}
+
+@keyframes bump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}
+
+.animate-bump {
+  animation: bump 0.35s ease;
+}
+
+@keyframes smokeDrift {
+  to {
+    transform: translate3d(2%, -3%, 0) scale(1.04);
+  }
+}
+
+.animate-smoke {
+  animation: smokeDrift 9s ease-in-out infinite alternate;
+}
+
+@keyframes flamePulse {
+  to {
+    transform: scaleY(1.12) translateY(5px);
+    opacity: 0.8;
+  }
+}
+
+.animate-flame {
+  animation: flamePulse 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-card-in {
+  animation: cardIn 0.45s ease forwards;
+}
+
+/* Metallic insignia shine */
+.metallic-text {
+  background: linear-gradient(135deg, #ffffff 0%, #9da2aa 45%, #ffffff 70%, #767b84 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

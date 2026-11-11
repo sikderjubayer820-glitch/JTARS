@@ -1,0 +1,8 @@
+{
+  "name": "JTARS ",
+  "description": "JTARS premium streetwear clothing brand online store with apparel catalog, shopping cart, order tracking, and admin management portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
